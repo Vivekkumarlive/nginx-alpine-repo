@@ -1,0 +1,6 @@
+FROM ubuntu
+LABEL maintainer="vivek.kumarconnect@gmail.com"
+RUN apt update && apt install nginx -y
+WORKDIR /app
+COPY . /index.html 
+CMD ["service","nginx","start"] 
